@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= json.project.title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  </head>
+  <script src="http://projects.sfchronicle.com/shared/js/jquery.min.js"></script>
+
+
+  <body>
+
+    <% csv.permit_data.forEach(function(pp,pdx) { %>
+      <div class="agency" id=agency<%=pdx%>>
+        <img src="http://ww2.hdnux.com/photos/54/11/64/12034976/3/100x100.jpg">
+      </div>
+    <% }); %>
+
+    <% csv.permit_data.forEach(function(pp,pdx) { %>
+      <div class="agencyINFO" id=agencyINFO<%=pdx%>>
+        <div class="agency"><%=pp.agency %></div>
+        <div class="explanation"><%=pp.permit %></div>
+      </div>
+    <% }); %>
+
+    <script>
+      var permitData = <%= JSON.stringify(csv.permit_data) %>;
+    </script>
+
+    <script src="/app.js" async></script>
+    <%= t.include("partials/_helloSFC.html") %>
+
+  </body>
+</html>

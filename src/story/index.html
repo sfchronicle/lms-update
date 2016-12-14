@@ -9,8 +9,9 @@
     <link rel="stylesheet" type="text/css" href="../style.css">
 
     <!-- scripts for stand-alone projects, comment for embedded projects -->
-    <%= !json.project.embedded ? t.include("partials/_paywall.html") : t.include("partials/_embedframe.html") %>
+    <!-- <%= !json.project.embedded ? t.include("partials/_paywall.html") : t.include("partials/_embedframe.html") %> -->
     <!-- also replace <body> with <body is="responsive-body"> -->
+    <script src="http://projects.sfchronicle.com/shared/js/jquery.min.js"></script>
 
     <%= t.include("partials/_head.html") %>
 
@@ -26,7 +27,7 @@
           <h1 class="title long">Last Men Standing</h1>
           <div class="deck">This is an update on our previous story “Last Men Standing”</a></div>
           <div class="author">By Erin Allday</a></div>
-          <div class="date">December 2016<div class="divider"></div></div>
+          <div class="date">December 2016</div>
 
           <div class="title-link-container">
             <span class="title-link">
@@ -53,7 +54,7 @@
         </div>
       </div>
     </div>
-    <p class="caption landing">While San Francisco, seen here from Treasure Island, is less vulnerable to rising sea levels than other parts of the Bay Area, portions of areas bordering the bay would be at risk.<span class="byline"> Michael Macor, The Chronicle</span></p>
+    <p class="caption landing">Caption. <span class="byline"> Erin Brethauer, Special to The Chronicle</span></p>
 
     <div class="mainbar">
       <%= t.include("partials/_mainbar.html") %>

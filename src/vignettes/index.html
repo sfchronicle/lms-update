@@ -9,8 +9,10 @@
     <link rel="stylesheet" type="text/css" href="../style.css">
 
     <!-- scripts for stand-alone projects, comment for embedded projects -->
-    <%= !json.project.embedded ? t.include("partials/_paywall.html") : t.include("partials/_embedframe.html") %>
+    <!-- <%= !json.project.embedded ? t.include("partials/_paywall.html") : t.include("partials/_embedframe.html") %> -->
     <!-- also replace <body> with <body is="responsive-body"> -->
+    <script src="http://projects.sfchronicle.com/shared/js/jquery.min.js"></script>
+
 
     <%= t.include("partials/_head.html") %>
 
@@ -18,26 +20,65 @@
 
   <%= !json.project.embedded ? "<body>" : "<body is='reponsive-body'>" %>
 
-    <div class="title-container">
-      <div class="background-img lms">
-          <div class="dim"></div>
-        <div class="over-img dim">
-        <div class="lms-img">
-          <h1 class="title long">Last Men Standing</h1>
-          <div class="deck">This is an update on our previous story “Last Men Standing”</a></div>
-          <div class="author">By Erin Allday</a></div>
-          <div class="date">December 2016<div class="divider"></div></div>
-
-          <div class="lms-link">Read the original story.</div>
-        </div>
-        </div>
-      </div>
+    <div class="full-width-img top-img">
+      <img src="http://ww2.hdnux.com/photos/54/11/64/12034976/3/2000x1000.jpg">
+      <div class="caption">Caption. <span class="byline">Erin Brethauer, Special to The Chronicle</span></div>
     </div>
-    <p class="caption landing">While San Francisco, seen here from Treasure Island, is less vulnerable to rising sea levels than other parts of the Bay Area, portions of areas bordering the bay would be at risk.<span class="byline"> Michael Macor, The Chronicle</span></p>
 
-    <div class="mainbar">
-      <%= t.include("partials/_mainbar.html") %>
+    <div class="vignette-title">
+      <div class="title">Vignettes</div>
+      <div class="deck">See where all of the men are, one year later. The bold Erin Allday caught up with all of the men from her first piece. Click or scroll to read their stories.</div>
+      <div class="author">By Erin Allday</a></div>
+      <div class="date">December 2016<div class="divider"></div></div>
     </div>
+
+    <div class="profile-marker" id="davidandralph"></div>
+    <div class="full-width-img vertical">
+      <img src="http://ww2.hdnux.com/photos/54/11/64/12034974/3/2000x1000.jpg">
+      <div class="caption">Caption. <span class="byline">Erin Brethauer, Special to The Chronicle</span></div>
+    </div>
+    <div class="profile-header">David and Ralph</div>
+    <%= t.include("partials/vignettes/_davidandralph.html") %>
+
+    <div class="profile-marker" id="ganymede"></div>
+    <div class="full-width-img super-vertical">
+      <img src="http://ww2.hdnux.com/photos/54/11/64/12034992/3/2000x1000.jpg">
+      <div class="caption">Caption. <span class="byline">Erin Brethauer, Special to The Chronicle</span></div>
+    </div>
+    <div class="profile-header">Ganymede</div>
+    <%= t.include("partials/vignettes/_ganymede.html") %>
+
+    <div class="profile-marker" id="kevin"></div>
+    <div class="full-width-img vertical">
+      <img src="http://ww2.hdnux.com/photos/54/11/64/12035094/3/2000x1000.jpg">
+      <div class="caption">Caption. <span class="byline">Erin Brethauer, Special to The Chronicle</span></div>
+    </div>
+    <div class="profile-header">Kevin</div>
+    <%= t.include("partials/vignettes/_kevin.html") %>
+
+    <div class="profile-marker" id="harry"></div>
+    <div class="full-width-img vertical">
+      <img src="http://ww2.hdnux.com/photos/54/11/64/12035056/3/2000x1000.jpg">
+      <div class="caption">Caption. <span class="byline">Erin Brethauer, Special to The Chronicle</span></div>
+    </div>
+    <div class="profile-header">Harry</div>
+    <%= t.include("partials/vignettes/_harry.html") %>
+
+    <div class="profile-marker" id="mick"></div>
+    <div class="full-width-img vertical">
+      <img src="http://ww2.hdnux.com/photos/54/11/64/12035100/3/2000x1000.jpg">
+      <div class="caption">Caption. <span class="byline">Erin Brethauer, Special to The Chronicle</span></div>
+    </div>
+    <div class="profile-header">Mick</div>
+    <%= t.include("partials/vignettes/_mick.html") %>
+
+    <div class="profile-marker" id="peter"></div>
+    <div class="full-width-img vertical">
+      <img src="http://ww2.hdnux.com/photos/54/11/64/12034985/3/2000x1000.jpg">
+      <div class="caption">Caption. <span class="byline">Erin Brethauer, Special to The Chronicle</span></div>
+    </div>
+    <div class="profile-header">Peter</div>
+    <%= t.include("partials/vignettes/_peter.html") %>
 
     <%= t.include("partials/_credits.html") %>
     <%= t.include("partials/_footer.html") %>

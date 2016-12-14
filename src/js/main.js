@@ -15,14 +15,14 @@ window.onload = function() {
 
 
 //DELETE======================================================================
-$(".agency").click(function() {
-  for (var i=0; i<12; i++) {
-      $('#agencyINFO'+i).css("display","none");
-  }
-  var elemID = this.id;
-  var elemIDnum = elemID.split("y")[1];
-  $("#agencyINFO"+elemIDnum).fadeIn();
-});
+// $(".agency").click(function() {
+//   for (var i=0; i<12; i++) {
+//       $('#agencyINFO'+i).css("display","none");
+//   }
+//   var elemID = this.id;
+//   var elemIDnum = elemID.split("y")[1];
+//   $("#agencyINFO"+elemIDnum).fadeIn();
+// });
 //DELETE======================================================================
 
 // templates for the two interactives

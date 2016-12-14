@@ -18,54 +18,50 @@ var slideshow_template = dot.compile(require("../partials/_slideshow.html"));
 
 // Gray photo gallery
 var photo00 = {
-  url: "http://ww2.hdnux.com/photos/54/11/64/12043373/3/2000x1000.jpg",
-  caption: "The San Francisco Chronicle hosts the April premiere of its first feature film, “Last Men Standing,” at the Castro Theater in San Francisco. "
-};
-var photo01 = {
   url: "http://ww2.hdnux.com/photos/54/11/64/12039420/3/2000x1000.jpg",
   caption: "Jesus Guillen was in his typical vibrant colors at the U.S. Conference on AIDS in Florida. "
 };
-var photo02 = {
+var photo01 = {
   url: "http://ww2.hdnux.com/photos/54/11/64/12039425/3/2000x1000.jpg",
   caption: "Jesus Guillen embraces women he met at the International AIDS Conference in South Africa. "
 };
-var photo03 = {
+var photo02 = {
   url: "http://ww2.hdnux.com/photos/54/11/64/12039401/3/2000x1000.jpg",
   caption: "After a 12-plus-hour flight from San Francisco to South Africa for the International AIDS Conference, Jesus Guillen makes friends on the bus to his hotel. "
 };
-var photo04 = {
+var photo03 = {
   url: "http://ww2.hdnux.com/photos/54/11/64/12039400/3/2000x1000.jpg",
   caption: "Jesus Guillen made time to relax in the pool during a break at the U.S. Conference on AIDS in Florida. "
 };
-var photo05 = {
+var photo04 = {
   url: "http://ww2.hdnux.com/photos/54/11/64/12039421/3/2000x1000.jpg",
   caption: "Jesus Guillen poses with a doorman at a hotel in South Africa, where he was attending the International AIDS Conference. "
 };
-var photo06 = {
+var photo05 = {
   url: "http://ww2.hdnux.com/photos/54/11/64/12039417/3/2000x1000.jpg",
   caption: "Jesus Guillen was invited to the International AIDS Conference in South Africa to represent a screening of “Last Men Standing,” The Chronicle’s documentary on AIDS and HIV survivors. "
 };
-var photo07 = {
+var photo06 = {
   url: "http://ww2.hdnux.com/photos/54/11/64/12039418/3/2000x1000.jpg",
   caption: "Jesus Guillen went shopping for clothes and small gifts while attending the International AIDS Conference in South Africa. These women were selling large avocados. "
 };
-var photo08 = {
+var photo07 = {
   url: "http://ww2.hdnux.com/photos/54/11/64/12039425/3/2000x1000.jpg",
   caption: "At the International AIDS Conference in South Africa, Jesus Guillen meets with friends from a U.S. HIV advocacy group. "
 };
-var photo09 = {
+var photo08 = {
   url: "http://ww2.hdnux.com/photos/54/11/64/12039548/3/2000x1000.jpg",
   caption: "Jesus Guillen traveled to Portland, Ore., for a screening of “Last Men Standing” at an LGBT film festival. "
 };
 
 // filling in slideshow
-[0,1,2,3,4,5,6,7,8,9].forEach(function(ff){
+[0,1,2,3,4,5,6,7,8].forEach(function(ff){
   $("#photo_g0"+ff).append(slideshow_template(eval("photo0"+ff)));
 });
 
 // photo gallery event listeners
 var gallery0_idx = 0;
-var Ngallery0 = 9; var kk = 0;
+var Ngallery0 = 8; var kk = 0;
 // set up clicking to update map interactive on mobile
 document.getElementById("scroll-right-gallery"+kk).addEventListener("click", function() {
   console.log("clicked right");

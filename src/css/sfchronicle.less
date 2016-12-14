@@ -206,11 +206,15 @@ text {
   }
   text-align: center;
   .lms-link {
-    width: 250px;
+    width: 325px;
     // margin: auto;
     border: 1px solid white;
-    padding: 10px 0;
+    padding: 5px 0;
     text-align: center;
+    @media @mobile {
+      width: 90%;
+      margin: auto;
+    }
   }
 }
 
@@ -248,6 +252,7 @@ text {
     margin: 20px auto 0;
     margin-top: 10px;
     margin-bottom: 25px;
+    padding-left: 0;
 
     &.text-width {
       max-width:800px;
@@ -301,12 +306,23 @@ text {
     max-width: 650px;
     margin: auto;
     padding-bottom: 30px;
+    @media @mobile {
+      width: 95%;
+      font-size: 21px;
+      padding-bottom: 20px;
+    }
   }
   .title {
     font-size: 45px;
     padding-bottom: 30px;
+    @media @mobile {
+      font-size: 30px;
+    }
   }
   margin-bottom: 30px;
+  @media @mobile {
+    margin-bottom: 0;
+  }
 }
 
 // sticky navigation bar -------------------------------

@@ -16,6 +16,35 @@
 
   <%= !json.project.embedded ? "<body>" : "<body is='reponsive-body'>" %>
 
+    <div class="full-width-img lms-mobile">
+      <img src="http://ww2.hdnux.com/photos/54/11/64/12035057/3/2000x1000.jpg">
+      <div class="caption">Jesus Guillen pets his cat, Mija, in his apartment in San Francisco. <span class="byline">Erin Brethauer, Special to The Chronicle</span></div>
+    </div>
+    <div class="lms-mobile-title">
+      <h1 class="title long">Still Standing</h1>
+      <div class="deck">Jesus Guillen, one face of AIDS survival, fights anew for recognition, while still fighting to stay alive</a></div>
+      <div class="author">By Erin Allday</a></div>
+      <div class="date">December 2016</div>
+      <div class="social-container">
+        <div class="link-icon">
+          <a id="mail-icon" title="Share via email" href="mailto:?subject=<%= grunt.data.json.project.title %>&body=<%= grunt.data.json.project.description %>%0A%0Ahttp%3A%2F%2Fprojects.sfchronicle.com%2F2016%2F<%= grunt.data.json.project.slug %>">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="link-icon">
+          <a id="facebook-icon" title="Share on Facebook" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fprojects.sfchronicle.com%2F2016%2F<%= grunt.data.json.project.slug %>', 'facebook-share-dialog', 'width=626,height=436'); return false;">
+            <i class="fa fa-facebook"></i>
+          </a>
+        </div>
+
+        <div class="link-icon">
+          <a id="twitter-icon" title="Share on Twitter" href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fprojects.sfchronicle.com%2F2016%2F<%= grunt.data.json.project.slug %>&text=<%= grunt.data.json.project.twitter_text %>&hashtags=<%= grunt.data.json.project.hashtag %>">
+            <i class="fa fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
     <div class="title-container">
       <div class="background-img lms">
           <div class="dim"></div>
@@ -51,7 +80,7 @@
         </div>
       </div>
     </div>
-    <p class="caption landing">Jesus Guillen pets his cat, Mija, in his apartment in San Francisco. <span class="byline"> Erin Brethauer, Special to The Chronicle</span></p>
+    <p class="caption landing caption-desktop">Jesus Guillen pets his cat, Mija, in his apartment in San Francisco. <span class="byline"> Erin Brethauer, Special to The Chronicle</span></p>
 
     <div class="mainbar">
       <%= t.include("partials/_mainbar.html") %>

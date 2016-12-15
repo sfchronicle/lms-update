@@ -1,6 +1,33 @@
 // .no-margin-img {
 //   margin-top: 0;
 // }
+.lms-mobile, .lms-mobile-title {
+  display: none;
+  @media @mobile {
+    display: block;
+    text-align: center;
+    .deck {
+      max-width:95%;
+    }
+  }
+}
+.lms-mobile {
+  margin-bottom: 20px;
+}
+.lms-mobile-title {
+  top: 0;
+}
+.caption-desktop {
+  @media @mobile {
+    display: none;
+  }
+}
+.title-container {
+  @media @mobile {
+    display: none;
+  }
+}
+
 .one-line {
   display: block;
 }
@@ -420,7 +447,7 @@ a {
       font-size:0.6em;
     }
   }
-  
+
   &::after {
     visibility: hidden;
     display: block;

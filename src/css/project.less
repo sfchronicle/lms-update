@@ -111,11 +111,11 @@
     @media @mobile {
       padding: 0;
       padding-left: 20px;
-      font-size: 18px;
+      font-size: 20px;
     }
     @media @small-mobile {
       padding-left: 10px;
-      font-size: 16px;
+      font-size: 18px;
     }
   }
   .sub-title {
@@ -244,6 +244,12 @@
   display: inline-block;
   @media @mobile {
     display: none !important;
+  }
+}
+.not-desktop {
+  display: none;
+  @media @mobile {
+    display: inline-block;
   }
 }
 

@@ -363,7 +363,12 @@ text {
   // font-family: @body;
   cursor: pointer;
   @media @mobile {
-    padding: 5px 10px 0 7px;
+    padding: 5px 7px 0 7px;
+  }
+  .fa {
+    @media @small-mobile {
+      font-size: 18px;
+    }
   }
 
   &.active {

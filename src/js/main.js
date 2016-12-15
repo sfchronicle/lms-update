@@ -23,7 +23,7 @@ var photo00 = {
 };
 var photo01 = {
   url: "http://ww2.hdnux.com/photos/54/11/64/12039425/3/2000x1000.jpg",
-  caption: "Jesus Guillen embraces women he met at the International AIDS Conference in South Africa. "
+  caption: "At the International AIDS Conference in South Africa, Jesus Guillen meets with friends from a U.S. HIV advocacy group. "
 };
 var photo02 = {
   url: "http://ww2.hdnux.com/photos/54/11/64/12039401/3/2000x1000.jpg",

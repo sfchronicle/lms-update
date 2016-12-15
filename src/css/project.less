@@ -12,7 +12,14 @@
   margin-bottom: 20px;
   text-transform: uppercase;
   @media @mobile {
+    font-size: 12px;
+    width: 160px;
     // display: none;
+  }
+  &.left {
+    text-align: center;
+    margin-left: 0;
+    margin: 0px 0 40px 0;
   }
 }
 
@@ -28,6 +35,7 @@
     text-align: center;
     .deck {
       max-width:95%;
+      margin: auto;
     }
   }
 }
@@ -345,6 +353,9 @@ a {
 .mainbar {
   text-align: left;
   padding-top: 30px;
+  @media @mobile {
+    padding-top: 20px;
+  }
 }
 
 .credits {

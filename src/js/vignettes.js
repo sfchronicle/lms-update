@@ -31,16 +31,22 @@ function activate() {
   var sticker_ph = document.getElementById('stick-ph');
   var window_top = document.body.scrollTop;
   var div_top = document.getElementById('stick-here').getBoundingClientRect().top + window_top;
+  var social_block = document.getElementById('social-block');
+  var project_link = document.getElementById('project-link');
   // var long = document.getElementById('long');
 
   if (window_top > div_top) {
       sticker.classList.add('fixed');
       sticker_ph.style.display = 'block'; // puts in a placeholder for where sticky used to be for smooth scrolling
       // long.style.display = 'inline-block';
+      social_block.style.display = 'inline-block';
+      project_link.style.display = 'inline-block';
   } else {
       sticker.classList.remove('fixed');
       sticker_ph.style.display = 'none'; // removes placeholder
       // long.style.display = 'none';
+      social_block.style.display = 'none';
+      project_link.style.display = 'none';
   }
 
   var top = [], btm = [];
@@ -63,10 +69,8 @@ function activate() {
 
 $(document).on('click', 'a[href^="#"]', function(e) {
 
-    console.log("we clicked");
     // target element id
     var id = $(this).attr('href');
-    console.log(id);
 
     // target element
     var $id = $(id);
@@ -79,8 +83,6 @@ $(document).on('click', 'a[href^="#"]', function(e) {
 
     // top position relative to the document
     var pos = $(id).offset().top;
-    console.log(id);
-    console.log(pos);
 
     // animated top scrolling
     $('body, html').animate({scrollTop: pos});

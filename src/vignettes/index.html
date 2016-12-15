@@ -27,17 +27,29 @@
       <div class="deck">Revisiting the 'Last Men Standing': Catching up with the Bay Area men who survived an epidemic and are still fighting for their lives</div>
       <div class="author">By Erin Allday</a></div>
       <div class="date">December 2016</div>
+      <div class="social-container">
+        <div class="link-icon">
+          <a id="mail-icon" title="Share via email" href="mailto:?subject=<%= grunt.data.json.project.title %>&body=<%= grunt.data.json.project.description %>%0A%0Ahttp%3A%2F%2Fprojects.sfchronicle.com%2F2016%2F<%= grunt.data.json.project.slug %>">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="link-icon">
+          <a id="facebook-icon" title="Share on Facebook" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fprojects.sfchronicle.com%2F2016%2F<%= grunt.data.json.project.slug %>', 'facebook-share-dialog', 'width=626,height=436'); return false;">
+            <i class="fa fa-facebook"></i>
+          </a>
+        </div>
+
+        <div class="link-icon">
+          <a id="twitter-icon" title="Share on Twitter" href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fprojects.sfchronicle.com%2F2016%2F<%= grunt.data.json.project.slug %>&text=<%= grunt.data.json.project.twitter_text %>&hashtags=<%= grunt.data.json.project.hashtag %>">
+            <i class="fa fa-twitter"></i>
+          </a>
+        </div>
+      </div>
     </div>
 
     <div id="stick-here"></div>
-    <div id="stick-me">
-      <div id="d" class="sub-title"><a href="#dsection">David & Ralph</a></div>
-      <div id="g" class="sub-title"><a href="#gsection">Ganymede</a></div>
-      <div id="k" class="sub-title"><a href="#ksection">Kevin</a></div>
-      <div id="h" class="sub-title"><a href="#hsection">Harry</a></div>
-      <div id="m" class="sub-title"><a href="#msection">Mick</a></div>
-      <div id="p" class="sub-title"><a href="#psection">Peter</a></div>
-    </div>
+      <%= t.include("partials/_nav.html") %>
     <div id="stick-ph"></div>
 
     <div class="profile-marker" id="dsection">
@@ -106,8 +118,10 @@
       <a href="http://projects.sfchronicle.com/2016/living-with-aids/peter-greene/" target="_blank"><div class="vignette-link last">Read Peter Greene's original story in “Last Men Standing”.</div></a>
     </div>
 
-    <%= t.include("partials/_credits.html") %>
-    <%= t.include("partials/_footer.html") %>
+    <div class="vignettes-credits">
+      <%= t.include("partials/_credits.html") %>
+    </div>
+    <%= t.include("partials/_vignettes_footer.html") %>
 
     <script src="../vignettes_app.js" async></script>
     <%= t.include("partials/_helloSFC.html") %>

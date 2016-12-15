@@ -1,6 +1,137 @@
 // .no-margin-img {
 //   margin-top: 0;
 // }
+.one-line {
+  display: block;
+}
+
+#project-link {
+  display: none;
+}
+#social-block {
+  display: none;
+}
+
+.big-nav {
+  height: 80px;
+  #social-block {
+    display: inline-block;
+    text-align: center;
+  }
+  .link{
+    @media @mobile {
+      float: left;
+    }
+  }
+  .story-link {
+    font-family: @body-bold;
+    a {
+      color: @dark-gray;
+    }
+    @media @mobile {
+      padding-right: 20px;
+    }
+    @media @small-mobile {
+      padding-top: 9px;
+      font-size: 14px;
+      padding-right: 5px;
+    }
+  }
+  .social-link {
+    float: left;
+    padding: 0 10px;
+    a {
+      color: @dark-gray;
+      font-size: 18px;
+      margin-top: -2px;
+    }
+  }
+  .specialhead-top {
+    font-size: 22px;
+    @media @mobile {
+      padding: 0;
+      padding-left: 20px;
+      font-size: 18px;
+    }
+    @media @small-mobile {
+      padding-left: 10px;
+      font-size: 16px;
+    }
+  }
+  .sub-title {
+    vertical-align: top;
+    a {
+      color: @dark-gray;
+    }
+    @media @mobile {
+      font-size: 14px;
+      padding: 3px !important;
+    }
+    @media @small-mobile {
+      font-size: 12px;
+      padding: 2px !important;
+    }
+  }
+  .social-link {
+    .fa {
+      vertical-align: bottom;
+      @media @mobile {
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.social-container {
+  .link-icon {
+    display: inline-block;
+    .fa {
+      font-size: 30px;
+      @media @mobile {
+        font-size: 25px;
+      }
+      color: @gray-blue;
+      &:hover {
+        color: darken(@gray-blue,10%);
+      }
+    }
+    padding: 0 10px;
+    @media @mobile {
+      padding: 0 5px;
+    }
+  }
+  text-align: center;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+.vignettes-footer {
+  background: @charcoal;
+  opacity: 0.95;
+  padding: 0 10px;
+  position: relative;
+  z-index: 99;
+  margin-top: 10px;
+  clear:both;
+
+  .logo {
+    float: left;
+    margin-right: 10px;
+
+    img {
+      padding: 10px 0;
+      width: 180px;
+      vertical-align: bottom;
+    }
+  }
+
+  &::after {
+    clear: both;
+    content: " ";
+    display: block;
+  }
+}
+
 
 .nav-bottom {
   @media @mobile {
@@ -73,6 +204,9 @@ a {
     }
     &.last {
       margin-bottom: 50px;
+      @media @mobile {
+        margin-bottom: 0px;
+      }
     }
     @media @mobile {
       width: 90%;
@@ -158,9 +292,10 @@ a {
 
 #stick-me {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   @media @mobile {
     margin-bottom: 0;
+    height: 80px;
   }
 }
 
@@ -174,7 +309,8 @@ a {
   font-family: @title;
   font-size: 18px;
   &.activelink {
-    font-family: @body-bold;
+    // font-family: @body-bold;
+    text-decoration: underline;
   }
   // font-family: @block-graphics;
 

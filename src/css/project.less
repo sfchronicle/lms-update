@@ -223,11 +223,20 @@
 }
 
 .infobox {
-  background: @light-gray;
+  background: #e6e6e6;
   font-family: @block-graphics;
   font-size: 14px;
   padding: 20px;
   color: black;
+
+  .text{
+    font-family:@title;
+    font-size:1em;
+  }
+  p{
+    padding:0;
+    margin-bottom:0.5em;
+  }
   a {
     color: @red;
     &:hover {
@@ -236,7 +245,9 @@
   }
   .info-title {
     font-family: @bold-graphics;
-    // color: @red;
+    text-transform:uppercase;
+    font-size:1.2em;
+    color:#333;
   }
 }
 
@@ -532,4 +543,8 @@ a {
     font-size:0.6em;
     padding:2px 6px;
   }
+}
+
+.box{
+  max-width:330px;
 }

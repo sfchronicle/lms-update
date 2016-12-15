@@ -252,3 +252,66 @@ a {
   margin-left: -0.5em;
   }
 }
+
+.xref{
+  max-width: 620px;
+  margin: 2em auto;
+  padding: 1em;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+
+  a{
+    color:#fff;
+  }
+
+  .xref-img{
+    width: 35%;
+    float: left;
+  }
+
+  img{
+    width:100%;
+  }
+
+  .xref-text{
+    float: left;
+    width: 59%;
+    margin-left: 1em;
+    font-family: Farnhamdisplaylight;
+    font-size: 0.91em;
+
+    @media @mobile{
+      font-size:0.6em;
+    }
+  }
+  
+  &::after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+
+  @media @mobile{
+    padding:0.5em;
+  }
+}
+
+.xref-btn{
+  float: left;
+  margin-left: 1em;
+  margin-top: 0.4em;
+  padding: 3px 10px;
+  background: #c32525;
+  color: white;
+  font-family: antennaextralight;
+  font-size: 16px;
+  cursor:pointer;
+
+  @media @mobile{
+    font-size:0.6em;
+    padding:2px 6px;
+  }
+}

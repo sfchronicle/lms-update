@@ -1,6 +1,10 @@
 // .no-margin-img {
 //   margin-top: 0;
 // }
+.fa {
+  font-size: 20px;
+}
+
 .lms-mobile, .lms-mobile-title {
   display: none;
   @media @mobile {
@@ -44,6 +48,9 @@
   #social-block {
     display: inline-block;
     text-align: center;
+    .fa {
+      font-size: 19px;
+    }
   }
   .link{
     @media @mobile {
@@ -113,13 +120,13 @@
   .link-icon {
     display: inline-block;
     .fa {
-      font-size: 30px;
+      font-size: 19px;
       @media @mobile {
         font-size: 25px;
       }
-      color: @gray-blue;
+      color: @dark-gray;
       &:hover {
-        color: darken(@gray-blue,10%);
+        color: darken(@dark-gray,10%);
       }
     }
     padding: 0 10px;
@@ -129,7 +136,7 @@
   }
   text-align: center;
   margin: auto;
-  padding-bottom: 20px;
+  padding: 10px 0;
 }
 
 .vignettes-footer {
@@ -207,10 +214,12 @@
 
 .gallery-hed {
   text-align: center;
-  font-family: @block-graphics;
+  font-family: @med-graphics;
   border-bottom: 1px solid black;
   width: 60%;
   margin:auto;
+  font-size: 18px;
+  padding-top: 25px;
 }
 
 a {
@@ -273,6 +282,7 @@ a {
   margin-bottom: 50px;
   border-bottom: 1px solid black;
   width: 40%;
+  color: @dark-gray;
   @media @mobile {
     padding-top: 5px;
     font-size: 18px;

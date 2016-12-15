@@ -1,7 +1,7 @@
 // .no-margin-img {
 //   margin-top: 0;
 // }
-.fa {
+.fa-envelope, .fa-twitter, .fa-facebook {
   font-size: 20px;
 }
 
@@ -60,6 +60,7 @@
   }
   .story-link {
     font-family: @body-bold;
+    display: inline-block;
     a {
       color: @dark-gray;
     }
@@ -209,11 +210,16 @@
       color: darken(@red,10%);
     }
   }
+  .info-title {
+    font-family: @bold-graphics;
+    // color: @red;
+  }
 }
 
 .not-mobile {
+  display: inline-block;
   @media @mobile {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -274,7 +280,7 @@ a {
   font-family: @bold-graphics;
   margin: auto;
   text-align: center;
-  font-size: 40px;
+  font-size: 35px;
   @media @mobile {
     font-size: 20px;
   }
@@ -287,7 +293,7 @@ a {
   margin: auto;
   margin-bottom: 50px;
   border-bottom: 1px solid black;
-  width: 40%;
+  width: 60%;
   color: @dark-gray;
   @media @mobile {
     padding-top: 5px;

@@ -46,22 +46,18 @@ var photo06 = {
   caption: "Jesus Guillen went shopping for clothes and small gifts while attending the International AIDS Conference in South Africa. These women were selling large avocados. "
 };
 var photo07 = {
-  url: "http://ww2.hdnux.com/photos/54/11/64/12039425/3/2000x1000.jpg",
-  caption: "At the International AIDS Conference in South Africa, Jesus Guillen meets with friends from a U.S. HIV advocacy group. "
-};
-var photo08 = {
   url: "http://ww2.hdnux.com/photos/54/11/64/12039548/3/2000x1000.jpg",
   caption: "Jesus Guillen traveled to Portland, Ore., for a screening of “Last Men Standing” at an LGBT film festival. "
 };
 
 // filling in slideshow
-[0,1,2,3,4,5,6,7,8].forEach(function(ff){
+[0,1,2,3,4,5,6,7].forEach(function(ff){
   $("#photo_g0"+ff).append(slideshow_template(eval("photo0"+ff)));
 });
 
 // photo gallery event listeners
 var gallery0_idx = 0;
-var Ngallery0 = 8; var kk = 0;
+var Ngallery0 = 7; var kk = 0;
 // set up clicking to update map interactive on mobile
 document.getElementById("scroll-right-gallery"+kk).addEventListener("click", function() {
   console.log("clicked right");

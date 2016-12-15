@@ -191,6 +191,9 @@ text {
 
 .title-container {
   background-image: url("http://ww2.hdnux.com/photos/54/11/64/12035057/3/2000x1000.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
   .background-img {
     // background: #333333;
     color: white;
@@ -208,7 +211,8 @@ text {
   }
   text-align: center;
   .lms-link {
-    width: 325px;
+    width: 280px;
+    font-size: 20px;
     // margin: auto;
     border: 1px solid white;
     padding: 5px 0;
@@ -217,7 +221,10 @@ text {
       width: 90%;
       margin: auto;
     }
-    margin-top: 60px;
+    margin-top: 50px;
+    &.bottom {
+      margin-top: 20px;
+    }
   }
 }
 
@@ -346,11 +353,14 @@ text {
 }
 
 .link {
-  padding: 5px 10px 0 7px;
+  padding: 5px 12px 0 12px;
   vertical-align: 3px;
   font-size: 18px;
   // font-family: @body;
   cursor: pointer;
+  @media @mobile {
+    padding: 5px 10px 0 7px;
+  }
 
   &.active {
     background: @active-link;

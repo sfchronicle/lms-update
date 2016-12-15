@@ -60,12 +60,9 @@ var gallery0_idx = 0;
 var Ngallery0 = 7; var kk = 0;
 // set up clicking to update map interactive on mobile
 document.getElementById("scroll-right-gallery"+kk).addEventListener("click", function() {
-  console.log("clicked right");
   gallery0_idx = gallery0_idx+1;
   $(".photo_g"+kk).removeClass("active");
   $("#photo_g" + kk + eval("gallery"+kk+"_idx") ).addClass("active");
-  console.log("#photo_g" + kk + eval("gallery"+kk+"_idx"));
-  console.log(eval("gallery"+kk+"_idx"));
   if (eval("gallery"+kk+"_idx") == eval("Ngallery"+kk)) {
     $("#scroll-right-gallery"+kk).addClass("last");
   } else {
@@ -78,12 +75,9 @@ document.getElementById("scroll-right-gallery"+kk).addEventListener("click", fun
   };
 });
 document.getElementById("scroll-left-gallery"+kk).addEventListener("click", function() {
-  console.log("clicked left");
   gallery0_idx = gallery0_idx-1;
   $(".photo_g"+kk).removeClass("active");
   $("#photo_g" + kk + eval("gallery"+kk+"_idx") ).addClass("active");
-  console.log("#photo_g" + kk + eval("gallery"+kk+"_idx"));
-  console.log(eval("gallery"+kk+"_idx"));
   if (eval("gallery"+kk+"_idx") == eval("Ngallery"+kk)) {
     $("#scroll-right-gallery"+kk).addClass("last");
   } else {
@@ -94,4 +88,27 @@ document.getElementById("scroll-left-gallery"+kk).addEventListener("click", func
   } else {
     $("#scroll-left-gallery"+kk).removeClass("first");
   };
+});
+
+// scrolling code ==============================================================
+
+$(document).on('click', 'a[href^="#"]', function(e) {
+
+    // target element id
+    var id = $(this).attr('href');
+
+    // target element
+    var $id = $(id);
+    if ($id.length === 0) {
+        return;
+    }
+
+    // prevent standard hash navigation (avoid blinking in IE)
+    e.preventDefault();
+
+    // top position relative to the document
+    var pos = $(id).offset().top;
+
+    // animated top scrolling
+    $('body, html').animate({scrollTop: pos});
 });

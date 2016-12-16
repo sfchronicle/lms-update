@@ -11,7 +11,7 @@
     <!-- scripts for stand-alone projects, comment for embedded projects -->
     <%= !json.project.embedded ? t.include("partials/_paywall.html") : t.include("partials/_embedframe.html") %>
 
-    <%= t.include("partials/_head.html") %>
+    <%= t.include("partials/_headtwo.html") %>
 
   </head>
 
@@ -33,7 +33,7 @@
           </a>
         </div>
         <div class="link-icon">
-          <a id="twitter-icon" title="Share on Twitter" href="https://twitter.com/intent/tweet?url=<%= grunt.data.json.project.url %><%= grunt.data.json.project.slug_2 %>&text=<%= grunt.data.json.project.twitter_text_2 %>&hashtags=<%= grunt.data.json.project.hashtag %>">
+          <a id="twitter-icon" title="Share on Twitter" href="https://twitter.com/intent/tweet?url=<%= grunt.data.json.project.url %><%= grunt.data.json.project.slug_2 %>&text=<%= grunt.data.json.project.twitter_text %>&hashtags=<%= grunt.data.json.project.hashtag %>">
             <i class="fa fa-twitter"></i>
           </a>
         </div>
@@ -48,7 +48,7 @@
     </div>
 
     <div id="stick-here"></div>
-      <%= t.include("partials/_nav.html") %>
+      <%= t.include("partials/_navtwo.html") %>
     <div id="stick-ph"></div>
 
     <div class="profile-marker" id="dsection">

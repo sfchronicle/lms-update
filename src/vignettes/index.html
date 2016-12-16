@@ -33,7 +33,7 @@
           </a>
         </div>
         <div class="link-icon">
-          <a id="twitter-icon" title="Share on Twitter" href="https://twitter.com/intent/tweet?url=<%= grunt.data.json.project.url %><%= grunt.data.json.project.slug_2 %>&text=<%= grunt.data.json.project.twitter_text %>&hashtags=<%= grunt.data.json.project.hashtag %>">
+          <a id="twitter-icon" title="Share on Twitter" href="https://twitter.com/intent/tweet?url=<%= grunt.data.json.project.url %><%= grunt.data.json.project.slug_2 %>&text=<%= grunt.data.json.project.twitter_text_2 %>&hashtags=<%= grunt.data.json.project.hashtag %>">
             <i class="fa fa-twitter"></i>
           </a>
         </div>
@@ -121,9 +121,14 @@
       <a href="http://projects.sfchronicle.com/2016/living-with-aids/peter-greene/" target="_blank"><div class="vignette-link last">Read more about Peter Greene's life in “Last Men Standing.”</div></a>
     </div>
 
+    <a href="http://projects.sfchronicle.com/2016/aids-survivors/story/" target="_blank">
+      <div class="link-button"><p class="bold-font">Read Jesus' story</p><p>AIDS survivor Jesus Guillen fights anew for recognition, while still fighting to stay alive</p></div>
+    </a>
+
     <div class="vignettes-credits">
       <%= t.include("partials/_credits.html") %>
     </div>
+
     <%= t.include("partials/_vignettes_footer.html") %>
 
     <script src="../vignettes_app.js" async></script>

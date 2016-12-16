@@ -269,10 +269,13 @@
   margin:auto;
   font-size: 18px;
   padding-top: 25px;
+  @media @mobile {
+    width: 90%;
+  }
 }
 
 a {
-  .vignette-link {
+  .vignette-link, .link-button {
     font-family: @block-graphics;
     border: 1px solid @dark-gray;
     padding: 5px;
@@ -297,6 +300,29 @@ a {
       width: 90%;
       margin-top: 30px;
       margin-bottom: 50px;
+    }
+  }
+  .link-button {
+    border: 1px solid @red;
+    color: @red;
+    background: white;
+    &:hover {
+      background: @red;
+      color: white;
+    }
+    margin-bottom: 40px;
+    @media @mobile {
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+    .bold-font {
+      padding-top: 10px;
+      font-family: @bold-graphics;
+    }
+    p {
+      @media @mobile {
+        font-size: 16px;
+      }
     }
   }
 }
